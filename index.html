@@ -4,9 +4,64 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity Web Player | Bauforum_WEB</title>
+
+    <style>
+      /* General body styling */
+      body {
+        text-align: center;
+        padding: 0;
+        border: 0;
+        margin: 0;
+        background-color: #282828; /* Page background color */
+        font-family: Arial, sans-serif; /* Clean font style */
+        color: #ffffff; /* Text color */
+        overflow: hidden; /* Prevent scrolling */
+      }
+
+      /* Container for the WebGL content and text */
+      #content-container {
+        margin-top: 20px; /* Space from the top of the page */
+        padding: 10px;
+      }
+
+      /* Header styling */
+      h1 {
+        font-size: 24px;
+        margin: 0 0 10px; /* Adjust spacing around the title */
+        color: #ab001a; /* Red-colored header text */
+      }
+
+      p {
+        font-size: 16px;
+        margin: 5px 0 20px;
+        color: #dcdcdc; /* Subtle text color */
+      }
+
+      /* Unity canvas styling */
+      #unity-canvas {
+        background: #231F20; /* Unity canvas background */
+      }
+
+      /* Ensure full-screen on mobile */
+      @media (max-width: 768px) {
+        #unity-canvas {
+          width: 100vw; /* Full width of viewport */
+          height: 100vh; /* Full height of viewport */
+        }
+      }
+    </style>
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
-    <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px; background: #231F20"></canvas>
+
+    <div id="content-container">
+      <!-- Add header and optional text -->
+      <h1>Welcome to _</h1>
+      <p>Explore our interactive exhibition space and discover what _ has to offer!</p>
+
+      <!-- Unity WebGL canvas -->
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1" style="width: 960px; height: 600px;"></canvas>
+    </div>
+    
     <script src="Build/Bauforum_WebBuild_10.loader.js"></script>
     <script>
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
